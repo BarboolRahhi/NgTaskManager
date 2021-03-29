@@ -1,0 +1,39 @@
+<div class="body">
+  <header
+    class="header"
+    [class.body-pd]="windowWidth >= 768 ? isToggle : !isToggle"
+  >
+    <div class="header__toggle">
+      <!-- For Small Devices -->
+      <i
+        *ngIf="windowWidth < 768"
+        class="bx"
+        [ngClass]="isToggle ? 'bx-menu' : 'bx-x'"
+        id="header-toggle"
+        (click)="onToggle()"
+      ></i>
+
+      <!-- For Desktop -->
+      <i
+        *ngIf="windowWidth >= 768"
+        class="bx"
+        [ngClass]="isToggle ? 'bx-x' : 'bx-menu'"
+        id="header-toggle"
+        (click)="onToggle()"
+      ></i>
+    </div>
+    <div class="header__img"></div>
+  </header>
+
+  <div class="main-container">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quae
+    explicabo veritatis laudantium maiores. Quaerat numquam, delectus eum sint
+    impedit, sit suscipit corrupti consectetur non exercitationem repudiandae
+    quia accusamus laudantium? Lorem, ipsum dolor sit amet consectetur
+    adipisicing elit. Sunt dolorum officiis esse dolores eos quos delectus rem
+    ducimus doloremque explicabo cum saepe, nobis provident placeat consequatur
+    quidem accusamus neque ipsa.
+  </div>
+
+  <app-sidebar [isToggle]="isToggle"></app-sidebar>
+</div>

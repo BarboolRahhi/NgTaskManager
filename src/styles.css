@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+
+  /*===== Colors =====*/
+  --first-color: #4723d9;
+  --first-color-light: #afa5d9;
+  --white-color: #f7f6fb;
+
+  /*===== Font and typography =====*/
+  --body-font: "Nunito", sans-serif;
+  --normal-font-size: 1rem;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+/* body {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1.1rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: 0.5s;
+} */
+
+a {
+  text-decoration: none;
+}
+
+/* @media screen and (min-width: 768px) { 
+    body {
+      margin: calc(var(--header-height) + 1rem) 0 0 0;
+      padding-left: calc(var(--nav-width) + 1.4rem);
+    }
+} */
